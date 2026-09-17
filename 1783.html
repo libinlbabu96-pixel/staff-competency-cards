@@ -1,16 +1,36 @@
 <!DOCTYPE html><html><head><title>Staff Profile - Kelly Elaine Vila Sevilleja</title>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<style>body{font-family:Arial,sans-serif;margin:20px;background:#f4f6f9;}
+<style>body{font-family:Arial,sans-serif;margin:15px;background:#f4f6f9;color:#333;}
 .card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);max-width:650px;margin:auto;}
-h2{color:#333;border-bottom:2px solid #007bff;padding-bottom:10px;}
-table{width:100%;border-collapse:collapse;margin-top:15px;}
+h2{color:#333;border-bottom:2px solid #007bff;padding-bottom:10px;margin-top:0;}
+table{width:100%;border-collapse:collapse;margin-top:15px;margin-bottom:20px;}
 th,td{border:1px solid #ddd;padding:8px;text-align:left;font-size:14px;}
-th{background-color:#007bff;color:white;}</style></head><body>
-<div class='card'><h2>Staff Competency Profile</h2>
+th{background-color:#007bff;color:white;}
+#lock-screen{text-align:center;padding:40px 20px;}
+input[type='password']{padding:10px;font-size:16px;width:200px;border:1px solid #ccc;border-radius:4px;margin-right:10px;}
+button{background:#007bff;color:white;border:none;padding:10px 15px;font-size:16px;border-radius:4px;cursor:pointer;}
+button:hover{background:#0056b3;}.error{color:red;margin-top:10px;display:none;}</style>
+<script>
+function checkPassword() {
+  var pass = document.getElementById('passInput').value;
+  if(pass === '2026') {
+    document.getElementById('lock-screen').style.display = 'none';
+    document.getElementById('profile-content').style.display = 'block';
+  } else {
+    document.getElementById('error-msg').style.display = 'block';
+  }
+}
+</script></head><body>
+<div class='card' id='lock-screen'><h2>Restricted Access</h2>
+<p>Please enter the weekly access PIN to view staff competency details:</p>
+<input type='password' id='passInput' placeholder='Enter PIN' onkeypress='if(event.keyCode===13)checkPassword()'>
+<button onclick='checkPassword()'>Unlock</button>
+<p class='error' id='error-msg'>Incorrect PIN. Please try again.</p></div>
+<div class='card' id='profile-content' style='display:none;'><h2>Staff Competency Profile</h2>
 <p><strong>Employee ID:</strong> 1783</p>
 <p><strong>Name:</strong> Kelly Elaine Vila Sevilleja</p>
 <p><strong>Department:</strong> PROC | <strong>Role:</strong> Officer</p>
 <h3>Assessments & Licences</h3>
 <table><tr><th>Competency Name</th><th>Type</th><th>Expiry Date</th><th>Status</th></tr>
-<tr><td>Officer </td><td>Competence Assessments</td><td>14-10-2029</td><td>Competent</td></tr><tr><td>RKH-CT-011 TRACKS SAFETY AWARENESS</td><td>Licences</td><td>In Perpetuity</td><td>Valid</td></tr>
+<tr><td>Officer </td><td>Competence Assessments</td><td>14-10-2029</td><td style=''>Competent</td></tr><tr><td>RKH-CT-011 TRACKS SAFETY AWARENESS</td><td>Licences</td><td>In Perpetuity</td><td style=''>Valid</td></tr>
 </table></div></body></html>
