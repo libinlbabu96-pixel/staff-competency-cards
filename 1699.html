@@ -1,36 +1,1114 @@
-<!DOCTYPE html><html><head><title>Staff Profile - Andres III San Martin Elgo</title>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<style>body{font-family:Arial,sans-serif;margin:15px;background:#f4f6f9;color:#333;}
-.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);max-width:650px;margin:auto;}
-h2{color:#333;border-bottom:2px solid #007bff;padding-bottom:10px;margin-top:0;}
-table{width:100%;border-collapse:collapse;margin-top:15px;margin-bottom:20px;}
-th,td{border:1px solid #ddd;padding:8px;text-align:left;font-size:14px;}
-th{background-color:#007bff;color:white;}
-#lock-screen{text-align:center;padding:40px 20px;}
-input[type='password']{padding:10px;font-size:16px;width:200px;border:1px solid #ccc;border-radius:4px;margin-right:10px;}
-button{background:#007bff;color:white;border:none;padding:10px 15px;font-size:16px;border-radius:4px;cursor:pointer;}
-button:hover{background:#0056b3;}.error{color:red;margin-top:10px;display:none;}</style>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='description' content='Employee Safety Training and Licence Dashboard'>
+<title>Employee 1699</title>
+<style>
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;width:100%;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f2f4f7;color:#172033;padding:0 8px 35px;margin:0;}
+.header{background:#003366;color:#fff;width:100%;padding:26px 22px;border-radius:0 0 15px 15px;box-shadow:0 2px 7px rgba(0,0,0,.12);margin-bottom:20px;}
+.header-title{margin:0;font-size:28px;font-weight:700;letter-spacing:.1px;}
+.container{width:100%;max-width:1800px;margin:0 auto;}
+.section-title{font-size:20px;font-weight:700;margin:0 0 10px 0;color:#111827;}
+.summary{display:flex;flex-direction:column;gap:10px;margin-bottom:10px;}
+.summary-card{width:100%;border-radius:14px;padding:19px 17px;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+.summary-green{background:#d4edda;}
+.summary-amber{background:#fff3cd;}
+.summary-red{background:#f8d7da;}
+.summary-label{font-size:14px;font-weight:800;letter-spacing:1px;margin-bottom:8px;}
+.summary-green .summary-label{color:#155724;}
+.summary-amber .summary-label{color:#856404;}
+.summary-red .summary-label{color:#721c24;}
+.summary-number{font-size:36px;font-weight:700;line-height:1;}
+.summary-green .summary-number{color:#155724;}
+.summary-amber .summary-number{color:#856404;}
+.summary-red .summary-number{color:#721c24;}
+.search-box{width:100%;padding:13px 14px;font-family:'Segoe UI',Arial,sans-serif;font-size:16px;border:1px solid #cfd4da;border-radius:10px;background:#fff;outline:none;margin-bottom:12px;}
+.search-box:focus{border-color:#003366;box-shadow:0 0 0 2px rgba(0,51,102,.10);}
+.records{display:flex;flex-direction:column;gap:10px;}
+.record-card{background:#fff;width:100%;border-radius:13px;padding:17px;box-shadow:0 2px 7px rgba(0,0,0,.08);overflow-wrap:anywhere;}
+.field{margin-bottom:13px;}
+.field:last-of-type{margin-bottom:5px;}
+.field-label{font-size:12px;font-weight:800;color:#475569;margin-bottom:3px;text-transform:uppercase;}
+.field-value{font-size:16px;line-height:1.4;color:#111827;}
+.competency-value{font-size:16px;line-height:1.4;}
+.status-area{margin-top:2px;}
+.status-badge{display:inline-block;padding:6px 13px;border-radius:999px;font-size:15px;font-weight:800;}
+.status-green{background:#d4edda;color:#155724;}
+.status-amber{background:#fff3cd;color:#856404;}
+.status-red{background:#f8d7da;color:#721c24;}
+@media(max-width:600px){body{padding:0 7px 25px;}.header{padding:22px 17px;border-radius:0 0 13px 13px;margin-bottom:15px;}.header-title{font-size:23px;}.section-title{font-size:18px;}.summary-card{padding:16px 15px;}.summary-label{font-size:12px;}.summary-number{font-size:32px;}.record-card{padding:15px;}.field-label{font-size:11px;}.field-value{font-size:15px;}.competency-value{font-size:15px;}}
+</style>
+</head>
+<body>
 <script>
-function checkPassword() {
-  var pass = document.getElementById('passInput').value;
-  if(pass === '2026') {
-    document.getElementById('lock-screen').style.display = 'none';
-    document.getElementById('profile-content').style.display = 'block';
-  } else {
-    document.getElementById('error-msg').style.display = 'block';
-  }
+function checkPassword(){
+var pass=document.getElementById('passInput').value;
+if(pass==='2027'){
+document.getElementById('lock-screen').style.display='none';
+document.getElementById('dashboard').style.display='block';
+}else{
+document.getElementById('error-msg').style.display='block';
 }
-</script></head><body>
-<div class='card' id='lock-screen'><h2>Restricted Access</h2>
-<p>Please enter the weekly access PIN to view staff competency details:</p>
-<input type='password' id='passInput' placeholder='Enter PIN' onkeypress='if(event.keyCode===13)checkPassword()'>
-<button onclick='checkPassword()'>Unlock</button>
-<p class='error' id='error-msg'>Incorrect PIN. Please try again.</p></div>
-<div class='card' id='profile-content' style='display:none;'><h2>Staff Competency Profile</h2>
-<p><strong>Employee ID:</strong> 1699</p>
-<p><strong>Name:</strong> Andres III San Martin Elgo</p>
-<p><strong>Department:</strong> AFC | <strong>Role:</strong> Technician</p>
-<h3>Assessments & Licences</h3>
-<table><tr><th>Competency Name</th><th>Type</th><th>Expiry Date</th><th>Status</th></tr>
-<tr><td>M010-MSI-ENG-01-MAN-41346 Sec.7 AFC SCU-SSW CM</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10000 AFC TOM Every 1000 Cards-Ticket Office Machine CSC RPT Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10001 AFC TOM CSC Printer Yearly or Every 10000 Cards Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10002 AFC TOM UPS 3 Yearly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10003 AFC TOM CT Encoder Every 5 Paper Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10004 AFC TOM CSC Printer Every 5 Routine Cleaning Cycle Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10005 AFC TOM CT Encoder & Receipt Printer 6 Monthly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10006 AFC TOM CT Encoder 1W/Every Paper Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10007 AFC TOM Whenever the Ribbon is Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10008 AFC TOM Receipt Printer Every Paper Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10009 AFC TOM Receipt Printer Every 5 Paper Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10100 AFC SCU 2 Monthly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10101 AFC SSW 1 Monthly Maintenance </td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-10200 AFC PDP 6 Monthly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11001 AFC Gate 3 Monthly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11002 AFC Gate 1 Yearly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11100 AFC TVM Monthly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11101 AFC TVM 2 Monthly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11102 AFC TVM 3 Monthly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11104 AFC TVM 6 Monthly Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11105 AFC TVM Receipt Printer Every Paper Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11106 AFC TVM Receipt Printer Every 5 Paper Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11107 AFC TVM CT Issuer Every Paper Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11108 AFC TVM CT Issuer Every 5 Paper Change Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-11109 AFC PCVM Yearly Preventive Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-30016 -AFC TOM Corrective Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-30143 -AFC Gate Corrective Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-30207 AFC TVM Corrective Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-30400 - PDP CM (prev. M010-MSI-ENG-01-MAN-41348 Sec.4.2 AFC PDP CM)</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>S200-SMC-MNT-01-PRO-XXXXXXX-30504 -AFC PCVM Corrective Maintenance</td><td>Competence Assessments</td><td>11-03-2029</td><td style=''>Competent</td></tr><tr><td>MF-002 MEDICAL FITNESS</td><td>Licences</td><td>05-09-2029</td><td style=''>Valid</td></tr><tr><td>TP-004 BASIC FIRST AID W/ CPR & AED TRAINING AND ASSESSMENT</td><td>Licences</td><td>12-08-2028</td><td style=''>Valid</td></tr><tr><td>TP-014 HAND & POWER TOOLS SAFETY TRAINING AND ASSESSMENT</td><td>Licences</td><td>21-07-2027</td><td style=''>Valid</td></tr><tr><td>TP-019 LOCK-OUT / TAGOUT TRAINING AND ASSESSMENT</td><td>Licences</td><td>23-06-2027</td><td style=''>Valid</td></tr><tr><td>TP-028 WORKING AT HEIGHTS TRAINING AND ASSESSMENT</td><td>Licences</td><td>24-06-2027</td><td style=''>Valid</td></tr><tr><td>RKH-CT-003 ENGINEERING PERSON-IN-CHARGE</td><td>Licences</td><td>25-09-2026</td><td style=''>Due</td></tr><tr><td>MHI-ST-009 MHI-SM PTW PROCEDURE BRIEFING</td><td>Licences</td><td>In Perpetuity</td><td style=''>Valid</td></tr><tr><td>RKH-CT-009 SAFETY CRITICAL COMMUNICATION</td><td>Licences</td><td>In Perpetuity</td><td style=''>Valid</td></tr><tr><td>RKH-CT-011 TRACKS SAFETY AWARENESS</td><td>Licences</td><td>In Perpetuity</td><td style=''>Valid</td></tr>
-</table></div></body></html>
+}
+function searchRecords(){
+var input=document.getElementById('searchBox');
+var filter=input.value.toLowerCase();
+var cards=document.querySelectorAll('.record-card');
+cards.forEach(function(card){
+var content=(card.textContent||card.innerText||'').toLowerCase();
+card.style.display=content.indexOf(filter)>-1?'block':'none';
+});
+}
+</script>
+<div id='lock-screen' style='max-width:500px;margin:70px auto;background:#fff;padding:25px;border-radius:13px;box-shadow:0 2px 8px rgba(0,0,0,.10);text-align:center;'>
+<h2 style='color:#003366;margin-top:0;'>Restricted Access</h2>
+<p>Please enter the weekly access PIN.</p>
+<input type='password' id='passInput' placeholder='Enter PIN' style='padding:12px;width:200px;border:1px solid #ccc;border-radius:7px;font-size:16px;' onkeypress="if(event.keyCode===13)checkPassword()">
+<button onclick='checkPassword()' style='background:#003366;color:white;border:0;padding:12px 18px;margin-left:5px;border-radius:7px;font-weight:bold;'>Unlock</button>
+<p id='error-msg' style='display:none;color:#b42318;font-weight:bold;'>Incorrect PIN. Please try again.</p>
+</div>
+<div id='dashboard' style='display:none;'>
+<header class='header'>
+<h1 class='header-title'>Employee 1699</h1>
+</header>
+<main class='container'>
+<div class='section-title'>Summary</div>
+<div class='summary'>
+<div class='summary-card summary-green'>
+<div class='summary-label'>VALID / COMPETENT</div>
+<div class='summary-number'>38</div>
+</div>
+<div class='summary-card summary-amber'>
+<div class='summary-label'>DUE / NOT YET COMPETENT</div>
+<div class='summary-number'>1</div>
+</div>
+<div class='summary-card summary-red'>
+<div class='summary-label'>OVERDUE / INVALID / SUSPENDED</div>
+<div class='summary-number'>0</div>
+</div>
+</div>
+<input type='text' id='searchBox' class='search-box' placeholder='Search competencies, status, dates...' oninput='searchRecords()'>
+<section class='records'>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>RKH-CT-003 ENGINEERING PERSON-IN-CHARGE</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>25/09/2026</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-amber'>DUE</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-019 LOCK-OUT / TAGOUT TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/06/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-028 WORKING AT HEIGHTS TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>24/06/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-014 HAND &amp; POWER TOOLS SAFETY TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>21/07/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-004 BASIC FIRST AID W/ CPR &amp; AED TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>08/12/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>MF-002 MEDICAL FITNESS</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>09/05/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10005 AFC TOM CT Encoder &amp; Receipt Printer 6 Monthly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10006 AFC TOM CT Encoder 1W/Every Paper Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10007 AFC TOM Whenever the Ribbon is Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10008 AFC TOM Receipt Printer Every Paper Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10009 AFC TOM Receipt Printer Every 5 Paper Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10100 AFC SCU 2 Monthly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10101 AFC SSW 1 Monthly Maintenance </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10200 AFC PDP 6 Monthly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11001 AFC Gate 3 Monthly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11002 AFC Gate 1 Yearly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11100 AFC TVM Monthly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11101 AFC TVM 2 Monthly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11102 AFC TVM 3 Monthly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11104 AFC TVM 6 Monthly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11105 AFC TVM Receipt Printer Every Paper Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11106 AFC TVM Receipt Printer Every 5 Paper Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11107 AFC TVM CT Issuer Every Paper Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11108 AFC TVM CT Issuer Every 5 Paper Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-11109 AFC PCVM Yearly Preventive Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-30016 -AFC TOM Corrective Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-30143 -AFC Gate Corrective Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-30207 AFC TVM Corrective Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-30400 - PDP CM (prev. M010-MSI-ENG-01-MAN-41348 Sec.4.2 AFC PDP CM)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-30504 -AFC PCVM Corrective Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>M010-MSI-ENG-01-MAN-41346 Sec.7 AFC SCU-SSW CM</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10000 AFC TOM Every 1000 Cards-Ticket Office Machine CSC RPT Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10001 AFC TOM CSC Printer Yearly or Every 10000 Cards Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10002 AFC TOM UPS 3 Yearly Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10003 AFC TOM CT Encoder Every 5 Paper Change Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>S200-SMC-MNT-01-PRO-XXXXXXX-10004 AFC TOM CSC Printer Every 5 Routine Cleaning Cycle Maintenance</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>03/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>MHI-ST-009 MHI-SM PTW PROCEDURE BRIEFING</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>In Perpetuity</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>RKH-CT-009 SAFETY CRITICAL COMMUNICATION</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>In Perpetuity</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>RKH-CT-011 TRACKS SAFETY AWARENESS</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>In Perpetuity</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>AFC</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+</section>
+</main>
+</div>
+</body>
+</html>
