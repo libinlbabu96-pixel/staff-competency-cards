@@ -1,36 +1,3636 @@
-<!DOCTYPE html><html><head><title>Staff Profile - Randy Chico Malaga</title>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<style>body{font-family:Arial,sans-serif;margin:15px;background:#f4f6f9;color:#333;}
-.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);max-width:650px;margin:auto;}
-h2{color:#333;border-bottom:2px solid #007bff;padding-bottom:10px;margin-top:0;}
-table{width:100%;border-collapse:collapse;margin-top:15px;margin-bottom:20px;}
-th,td{border:1px solid #ddd;padding:8px;text-align:left;font-size:14px;}
-th{background-color:#007bff;color:white;}
-#lock-screen{text-align:center;padding:40px 20px;}
-input[type='password']{padding:10px;font-size:16px;width:200px;border:1px solid #ccc;border-radius:4px;margin-right:10px;}
-button{background:#007bff;color:white;border:none;padding:10px 15px;font-size:16px;border-radius:4px;cursor:pointer;}
-button:hover{background:#0056b3;}.error{color:red;margin-top:10px;display:none;}</style>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='description' content='Employee Safety Training and Licence Dashboard'>
+<title>Employee 1467</title>
+<style>
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;width:100%;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f2f4f7;color:#172033;padding:0 8px 35px;margin:0;}
+.header{background:#003366;color:#fff;width:100%;padding:26px 22px;border-radius:0 0 15px 15px;box-shadow:0 2px 7px rgba(0,0,0,.12);margin-bottom:20px;}
+.header-title{margin:0;font-size:28px;font-weight:700;letter-spacing:.1px;}
+.container{width:100%;max-width:1800px;margin:0 auto;}
+.section-title{font-size:20px;font-weight:700;margin:0 0 10px 0;color:#111827;}
+.summary{display:flex;flex-direction:column;gap:10px;margin-bottom:10px;}
+.summary-card{width:100%;border-radius:14px;padding:19px 17px;box-shadow:0 2px 6px rgba(0,0,0,.08);}
+.summary-green{background:#d4edda;}
+.summary-amber{background:#fff3cd;}
+.summary-red{background:#f8d7da;}
+.summary-label{font-size:14px;font-weight:800;letter-spacing:1px;margin-bottom:8px;}
+.summary-green .summary-label{color:#155724;}
+.summary-amber .summary-label{color:#856404;}
+.summary-red .summary-label{color:#721c24;}
+.summary-number{font-size:36px;font-weight:700;line-height:1;}
+.summary-green .summary-number{color:#155724;}
+.summary-amber .summary-number{color:#856404;}
+.summary-red .summary-number{color:#721c24;}
+.search-box{width:100%;padding:13px 14px;font-family:'Segoe UI',Arial,sans-serif;font-size:16px;border:1px solid #cfd4da;border-radius:10px;background:#fff;outline:none;margin-bottom:12px;}
+.search-box:focus{border-color:#003366;box-shadow:0 0 0 2px rgba(0,51,102,.10);}
+.records{display:flex;flex-direction:column;gap:10px;}
+.record-card{background:#fff;width:100%;border-radius:13px;padding:17px;box-shadow:0 2px 7px rgba(0,0,0,.08);overflow-wrap:anywhere;}
+.field{margin-bottom:13px;}
+.field:last-of-type{margin-bottom:5px;}
+.field-label{font-size:12px;font-weight:800;color:#475569;margin-bottom:3px;text-transform:uppercase;}
+.field-value{font-size:16px;line-height:1.4;color:#111827;}
+.competency-value{font-size:16px;line-height:1.4;}
+.status-area{margin-top:2px;}
+.status-badge{display:inline-block;padding:6px 13px;border-radius:999px;font-size:15px;font-weight:800;}
+.status-green{background:#d4edda;color:#155724;}
+.status-amber{background:#fff3cd;color:#856404;}
+.status-red{background:#f8d7da;color:#721c24;}
+@media(max-width:600px){body{padding:0 7px 25px;}.header{padding:22px 17px;border-radius:0 0 13px 13px;margin-bottom:15px;}.header-title{font-size:23px;}.section-title{font-size:18px;}.summary-card{padding:16px 15px;}.summary-label{font-size:12px;}.summary-number{font-size:32px;}.record-card{padding:15px;}.field-label{font-size:11px;}.field-value{font-size:15px;}.competency-value{font-size:15px;}}
+</style>
+</head>
+<body>
 <script>
-function checkPassword() {
-  var pass = document.getElementById('passInput').value;
-  if(pass === '2026') {
-    document.getElementById('lock-screen').style.display = 'none';
-    document.getElementById('profile-content').style.display = 'block';
-  } else {
-    document.getElementById('error-msg').style.display = 'block';
-  }
+function checkPassword(){
+var pass=document.getElementById('passInput').value;
+if(pass==='2027'){
+document.getElementById('lock-screen').style.display='none';
+document.getElementById('dashboard').style.display='block';
+}else{
+document.getElementById('error-msg').style.display='block';
 }
-</script></head><body>
-<div class='card' id='lock-screen'><h2>Restricted Access</h2>
-<p>Please enter the weekly access PIN to view staff competency details:</p>
-<input type='password' id='passInput' placeholder='Enter PIN' onkeypress='if(event.keyCode===13)checkPassword()'>
-<button onclick='checkPassword()'>Unlock</button>
-<p class='error' id='error-msg'>Incorrect PIN. Please try again.</p></div>
-<div class='card' id='profile-content' style='display:none;'><h2>Staff Competency Profile</h2>
-<p><strong>Employee ID:</strong> 1467</p>
-<p><strong>Name:</strong> Randy Chico Malaga</p>
-<p><strong>Department:</strong> DMT | <strong>Role:</strong> Senior Technician</p>
-<h3>Assessments & Licences</h3>
-<table><tr><th>Competency Name</th><th>Type</th><th>Expiry Date</th><th>Status</th></tr>
-<tr><td>DMT-Air Shot Blast Booth Maintenance/ B/W/M/3M/6M </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Battery Powered Truck Maintenance/ W or B/M or 5 OH/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Bogie Washing Equipment Maintenance/ B/W/M/4M/6M/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Depot Protection System Maintenance/ M/3M/6M/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Forklift 2.5T Maintenance/ D or B/W or B/6M or 30 OH/Y/Y or 1000 OH </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Lifting Equipment Maintenance/ B/W/W or B/M/M or 5 OH//3M/6M/6M or 30 OH/Y (Pkg4)</td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Lifting Jack Maintenance/  B/M or 5 OH/6M or 30 OH/Y  </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Lubrication Equipment Maintenance/ W or B </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Manual Lifting Equipment Maintenance/ B/M/3M/6M/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Mobile Access Platform for MEP Type 1  Operation</td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Mobile Access Platform for MEP Type 1 Maintenance/ W or B/M or 5 OH/6M/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Mobile Access Platform for MEP Type 2  Maintenance/ B/M/6M/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Mobile Access Platform for MEP Type 2  Operation</td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Mobile Cleaning Equipment Maintenance/ W or B/M/Y or 500 OH </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Painting Faciliies for Car Body in Case of Damage Maintenance/ B/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Parts Washing Machine Maintenance/ B/ W or B/3M/2Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Powered Low Lift Pallet Truck 2.5T Maintenance/ W or B/M or 5 OH/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Powered Stacker Truck 2.5T Maintenance/ D or B/W or Y or 1000 OH</td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Road/Rail Mobile Access Platform (Cherry Picker) Maintenance/ B/M or 5 OH/6M or 30 OH/Y </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Shunting Equipment Maintenance/ B/W or B/M/3M/3M or 500 OH/6M/6M or 1000 OH/Y/6M/Y/3Y</td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Ultrasonic Parts / Bearing Washing Machine Maintenance/ D or B/M/6M </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Various Equipment Maintenance/ W or B/M/6M </td><td>Competence Assessments</td><td>01-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Shunting Equipment Operation</td><td>Competence Assessments</td><td>04-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Workshop Machinery Operation</td><td>Competence Assessments</td><td>04-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Magnetic Particle Inspection (axle and bogie frame) Operation</td><td>Competence Assessments</td><td>05-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Paint Booth Operation</td><td>Competence Assessments</td><td>06-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Underframe Cleaning System Operation</td><td>Competence Assessments</td><td>06-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Mobile Cleaning Equipment Operation</td><td>Competence Assessments</td><td>06-12-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Parts Washing Machine Operation</td><td>Competence Assessments</td><td>06-12-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Ultrasonic Parts / Bearing Washing Machine Operation</td><td>Competence Assessments</td><td>06-12-2028</td><td style=''>Competent</td></tr><tr><td>DMT-BUEES Operation</td><td>Competence Assessments</td><td>07-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Battery Powered Truck Operation</td><td>Competence Assessments</td><td>07-12-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Platform Trolley (Powered Lift table) 2.5T / Lift Table (350 & 500 Kgs) Operation</td><td>Competence Assessments</td><td>08-01-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Battery Equipment Operation</td><td>Competence Assessments</td><td>11-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Lifting Jack Operation</td><td>Competence Assessments</td><td>12-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Scissor Lifting Platform Operation</td><td>Competence Assessments</td><td>12-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Washing Machine for Air Conditioner Unit Filter Operation</td><td>Competence Assessments</td><td>12-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Bogie Washing Equipment Operation</td><td>Competence Assessments</td><td>13-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Damper & Primary Spring Test Stand Operation</td><td>Competence Assessments</td><td>13-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Stinger Shore Supply System Operation</td><td>Competence Assessments</td><td>13-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Air Shot Blast Booth Operation</td><td>Competence Assessments</td><td>13-12-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Depot Protection System Operation</td><td>Competence Assessments</td><td>14-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Rail Grinding Machine Operation (EV)</td><td>Competence Assessments</td><td>14-08-2027</td><td style=''>Competent</td></tr><tr><td>DMT-Road/Rail Vehicle Operation</td><td>Competence Assessments</td><td>14-08-2027</td><td style=''>Competent</td></tr><tr><td>DMT-Track Geometry & Inspection Vehicle Operation (EV)</td><td>Competence Assessments</td><td>14-08-2027</td><td style=''>Competent</td></tr><tr><td>DMT-Tunnel Cleaning Vehicle Operation (EV)</td><td>Competence Assessments</td><td>14-08-2027</td><td style=''>Competent</td></tr><tr><td>DMT-Breakdown Recovery Wagon Operation (EV)</td><td>Competence Assessments</td><td>14-08-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Diesel Locomotive Operation (EV)</td><td>Competence Assessments</td><td>14-08-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Flat Wagon with Jib Crane, Flat Wagon without Jib Crane and Well Wagon Operation (EV)</td><td>Competence Assessments</td><td>14-08-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Infrastructure Maintenance Vehicle Operation (EV)</td><td>Competence Assessments</td><td>14-08-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Battery Equipment Maintenance/ B/M/6M/Y  (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Bogie Powered Work Stand Maintenance/  W or B/M or 5 OH/6M or 30 OH/Y  (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Bogie Turntable Maintenance/ B/M/6M or 30 OH/Y  (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Engine Powered Trackwork Equipment Maintenance/ B/M or 5OH/Y/25OH/100OH/50OH/50OH/500 OH  (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Lifting Table Equipment Maintenance/ B/M or 5 OH/6M or 30 OH/Y  (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Paint Booth Maintenance/ B/M/6M/Y or 1000 OH/3300 OH/6600 OH/9900 OH/3Y (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Rail Tensor Maintenance/ W or B/M or 5 OH/6M or 30 OH/Y (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Stinger Shore Supply System Maintenance/ 6M/Y (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Track Slab Repair Tools Maintenance/ W or B/3M/6M (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Track Welding Equipment - Weld Shear Maintenance/ W or B/M or 5 OH/6M or 30 OH/Y (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Trackwork Measuring Equipment Maintenance/ W or B/M or 5 OH/6M or 30 OH/Y (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Underframe Cleaning Maintenance/ W or B/6M  (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Various Trackwork Tools Maintenance/W or B/M or 5OH/M or 20OH/3M or 50OH/6M or 100OH/Y/2Y (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Washing Machine for Air Conditioner Filters Maintenance/ W or B/M/3M/6M (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Workshop Machinery Maintenance/ B/W or B/M/3M/6M/10 OH/300 OH/Y (Pkg4)</td><td>Competence Assessments</td><td>14-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Lathe Machine Operation</td><td>Competence Assessments</td><td>17-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Wheel Load Measuring System 4 Axle Operation</td><td>Competence Assessments</td><td>17-03-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Bogie Powered Work stand Operation</td><td>Competence Assessments</td><td>17-04-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Painting Facilities for Car body Operation</td><td>Competence Assessments</td><td>18-01-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Automatic Train-set Wash (ATW) Manual Mode Operation </td><td>Competence Assessments</td><td>18-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Bogie Turntable Operation</td><td>Competence Assessments</td><td>20-02-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Trackwork Equipment Operation</td><td>Competence Assessments</td><td>21-04-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Bogie Frame Measurement System Squaring Operation</td><td>Competence Assessments</td><td>22-04-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Automatic Train-set Wash Maintenance/ D/W/M/3M/6M/Y/2Y </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Axle Lathe Maintenance/ B/M/6M or 30 OH/Y </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Bogie Frame Measurement System Maintenance/  W or B/Y </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-BUEES Maintenance  B/M or 5 RH/6M of 30 RH/Y  </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Damper and Primary Spring Test Stand Maintenance/ B & A/M/6M/Y/2Y/5Y </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Flash Butt Welder Maintenance/ B & A/W/M </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Lathe Machine Maintenance/ D or B/W or B/3M/4M </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Magnetic Particle Inspection Maintenance/ M/4M/6M/12M </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-RST Operator Simulator Maintenance/ W/M/SA/A </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Scissor Lifting Platform Maintenance/ D or B/W or B/6M or after 150 RH </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-WBCD Maintenance/  M/3M/6M/12M  </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Welding Equipment Maintenance/ M/3M/6M/Y</td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Wheel Boring Machine Maintenance/ W or B/M/6M or 400 OH/Y or 2000 OH </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Wheel Load Measuring System 4 Axle Maintenance/  B </td><td>Competence Assessments</td><td>23-10-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Re-railing Equipment Operation</td><td>Competence Assessments</td><td>24-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Wheel Reprofiling System - Underfloor Wheel Lathe Operation</td><td>Competence Assessments</td><td>27-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Road/Rail Mobile Access Platform (Cherry Picker) Operation</td><td>Competence Assessments</td><td>30-01-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Breakdown Recovery Wagon Maintenance/ W/M/6M/Y (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-DL Maint/100SH/250SH/500SH/1000SH/1500SH/2000SH/3000SH/4000,6000SH/DorB/W/M/6M/Y/2,3,4,5Y (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-IMV Maintenance/ B or 10 OH/50 OH/125 OH/250 OH/500 OH/1000 OH/2000OH/M (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Rail Grinding Machine Maintenance/ 50OH/10OH or B/20OH or B/100OH/200OH/500OH/1000OH/M (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Re-railing Equipment Maintenance/ E/M or 10 OH/12M/25 OH/50 OH/100 OH (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Road / Rail Vehicle Maintenance/ W or B/M or 250 OH/6M or 500 OH/Y (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-TCV Maint/ D or B/W/M/3M/1000H or 6M/100,250,400,500,2000H or Y/4000H or 2Y/6000H or 3Y (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Track Geometry Inspection Vehicle Maintenance/ W or B/M/Y/2Y/3Y/4Y (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-UWL Maint/ B/W or 40 OH/M or 250 OH/Bi-M or 500OH/4M or 1000OH/Y or 2000OH/2Y or 4000OH  (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Wagon w/wo Jib Crane Maint/ B/50OH/B/50OH/B/50OH/250OH/500OH/250OH/500OH/250OH/500OH (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Wheel Lathe Maintenance/ B/M/3M/6M/Y (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Wheel Press Maintenance/ 120OH/250OH/1000OH or 6M/2000OH or Y/3000OH or 3Y (Pkg1)</td><td>Competence Assessments</td><td>30-11-2028</td><td style=''>Competent</td></tr><tr><td>DMT-Lifting Equipment Operation</td><td>Competence Assessments</td><td>31-01-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Manual Lifting Equipment Operation</td><td>Competence Assessments</td><td>31-01-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Powered Low Lift Pallet Truck Operation</td><td>Competence Assessments</td><td>31-01-2029</td><td style=''>Competent</td></tr><tr><td>DMT-Powered Stacker Truck 2.5T Operation</td><td>Competence Assessments</td><td>31-01-2029</td><td style=''>Competent</td></tr><tr><td>DL-002 ENGINEERING VEHICLE DRIVING LICENSE</td><td>Licences</td><td>02-10-2026</td><td style=''>Due</td></tr><tr><td>TP-012 FIRE WARDEN TRAINING AND ASSESSMENT</td><td>Licences</td><td>05-11-2027</td><td style=''>Valid</td></tr><tr><td>TP-023 SAFE MANLIFT OPERATION TRAINING AND ASSESSMENT</td><td>Licences</td><td>06-05-2028</td><td style=''>Valid</td></tr><tr><td>RKH-CT-015 ENGINEERING VEHICLE SAFETY CRITICAL PROTOCOL AND NETWORK RULES TRAINING</td><td>Licences</td><td>07-09-2029</td><td style=''>Valid</td></tr><tr><td>TP-033 IMV HYDRAULIC CRANE OPERATOR TRAINING AND ASSESSMENT</td><td>Licences</td><td>07-10-2027</td><td style=''>Valid</td></tr><tr><td>TP-031 SAFE SCISSOR LIFT MOUNTED PLATFORM ON IMV OPERATION TRAINING AND ASSESSMENT</td><td>Licences</td><td>08-10-2027</td><td style=''>Valid</td></tr><tr><td>TP-027 SCAFFOLDING SUPERVISOR TRAINING AND ASSESSMENT</td><td>Licences</td><td>09-07-2028</td><td style=''>Valid</td></tr><tr><td>TP-029 HYDRAULIC CRANE ON RRV SAFETY OPERATION TRAINING AND ASSESSMENT</td><td>Licences</td><td>09-10-2027</td><td style=''>Valid</td></tr><tr><td>TP-022 SAFE JIB CRANE OPERATION TRAINING AND ASSESSMENT</td><td>Licences</td><td>13-10-2027</td><td style=''>Valid</td></tr><tr><td>TP-024 SAFE OVERHEAD CRANE OPERATION TRAINING AND ASSESSMENT</td><td>Licences</td><td>13-11-2027</td><td style=''>Valid</td></tr><tr><td>TP-007 CONFINED SPACE ENTRY TRAINING AND ASSESSMENT</td><td>Licences</td><td>14-09-2027</td><td style=''>Valid</td></tr><tr><td>TP-032 SCISSOR LIFT MOUNTED PLATFORM ON TCV SAFETY OPERATION TRAINING & ASSESSMENT</td><td>Licences</td><td>14-10-2027</td><td style=''>Valid</td></tr><tr><td>TP-030 SAFE JIB CRANE MOUNTED PLATFORM OPERATION TRAINING AND ASSESSMENT (FLAT WAGON)</td><td>Licences</td><td>15-10-2027</td><td style=''>Valid</td></tr><tr><td>TP-025 SCAFFOLDING ERECTION AND DISMANTLING TRAINING AND ASSESSMENT</td><td>Licences</td><td>16-02-2028</td><td style=''>Valid</td></tr><tr><td>TP-028 WORKING AT HEIGHTS TRAINING AND ASSESSMENT</td><td>Licences</td><td>16-04-2028</td><td style=''>Valid</td></tr><tr><td>TP-006 CONFINED SPACE ATTENDANT TRAINING AND ASSESSMENT</td><td>Licences</td><td>16-06-2029</td><td style=''>Valid</td></tr><tr><td>RKH-CT-003 ENGINEERING PERSON-IN-CHARGE</td><td>Licences</td><td>16-09-2027</td><td style=''>Valid</td></tr><tr><td>MF-002 MEDICAL FITNESS</td><td>Licences</td><td>17-08-2028</td><td style=''>Valid</td></tr><tr><td>TP-035 SAFE CHERRY PICKER OPERATION TRAINING AND ASSESSMENT</td><td>Licences</td><td>18-05-2028</td><td style=''>Valid</td></tr><tr><td>TP-004 BASIC FIRST AID W/ CPR & AED TRAINING AND ASSESSMENT</td><td>Licences</td><td>19-02-2027</td><td style=''>Valid</td></tr><tr><td>TP-005 BASIC RIGGING AND SLINGING TRAINING AND ASSESSMENT</td><td>Licences</td><td>19-08-2028</td><td style=''>Valid</td></tr><tr><td>TP-014 HAND & POWER TOOLS SAFETY TRAINING AND ASSESSMENT</td><td>Licences</td><td>19-11-2027</td><td style=''>Valid</td></tr><tr><td>TP-002 APPOINTED PERSON-LIFTING OPERATION TRAINING AND ASSESSMENT</td><td>Licences</td><td>23-02-2029</td><td style=''>Valid</td></tr><tr><td>TP-018 LIFTING SUPERVISOR SAFETY TRAINING AND ASSESSMENT</td><td>Licences</td><td>25-08-2028</td><td style=''>Valid</td></tr><tr><td>TP-015 HOT WORKS SAFETY TRAINING AND ASSESSMENT</td><td>Licences</td><td>26-02-2027</td><td style=''>Valid</td></tr><tr><td>TP-026 SCAFFOLDING INSPECTOR TRAINING AND ASSESSMENT</td><td>Licences</td><td>29-07-2028</td><td style=''>Valid</td></tr><tr><td>TP-019 LOCK-OUT / TAGOUT TRAINING AND ASSESSMENT</td><td>Licences</td><td>31-03-2027</td><td style=''>Valid</td></tr><tr><td>MHI-ST-009 MHI-SM PTW PROCEDURE BRIEFING</td><td>Licences</td><td>In Perpetuity</td><td style=''>Valid</td></tr><tr><td>RKH-CT-009 SAFETY CRITICAL COMMUNICATION</td><td>Licences</td><td>In Perpetuity</td><td style=''>Valid</td></tr><tr><td>RKH-CT-011 TRACKS SAFETY AWARENESS</td><td>Licences</td><td>In Perpetuity</td><td style=''>Valid</td></tr>
-</table></div></body></html>
+}
+function searchRecords(){
+var input=document.getElementById('searchBox');
+var filter=input.value.toLowerCase();
+var cards=document.querySelectorAll('.record-card');
+cards.forEach(function(card){
+var content=(card.textContent||card.innerText||'').toLowerCase();
+card.style.display=content.indexOf(filter)>-1?'block':'none';
+});
+}
+</script>
+<div id='lock-screen' style='max-width:500px;margin:70px auto;background:#fff;padding:25px;border-radius:13px;box-shadow:0 2px 8px rgba(0,0,0,.10);text-align:center;'>
+<h2 style='color:#003366;margin-top:0;'>Restricted Access</h2>
+<p>Please enter the weekly access PIN.</p>
+<input type='password' id='passInput' placeholder='Enter PIN' style='padding:12px;width:200px;border:1px solid #ccc;border-radius:7px;font-size:16px;' onkeypress="if(event.keyCode===13)checkPassword()">
+<button onclick='checkPassword()' style='background:#003366;color:white;border:0;padding:12px 18px;margin-left:5px;border-radius:7px;font-weight:bold;'>Unlock</button>
+<p id='error-msg' style='display:none;color:#b42318;font-weight:bold;'>Incorrect PIN. Please try again.</p>
+</div>
+<div id='dashboard' style='display:none;'>
+<header class='header'>
+<h1 class='header-title'>Employee 1467</h1>
+</header>
+<main class='container'>
+<div class='section-title'>Summary</div>
+<div class='summary'>
+<div class='summary-card summary-green'>
+<div class='summary-label'>VALID / COMPETENT</div>
+<div class='summary-number'>135</div>
+</div>
+<div class='summary-card summary-amber'>
+<div class='summary-label'>DUE / NOT YET COMPETENT</div>
+<div class='summary-number'>1</div>
+</div>
+<div class='summary-card summary-red'>
+<div class='summary-label'>OVERDUE / INVALID / SUSPENDED</div>
+<div class='summary-number'>0</div>
+</div>
+</div>
+<input type='text' id='searchBox' class='search-box' placeholder='Search competencies, status, dates...' oninput='searchRecords()'>
+<section class='records'>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DL-002 ENGINEERING VEHICLE DRIVING LICENSE</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>10/02/2026</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-amber'>DUE</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-004 BASIC FIRST AID W/ CPR &amp; AED TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>19/02/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-015 HOT WORKS SAFETY TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>26/02/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-019 LOCK-OUT / TAGOUT TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>31/03/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-012 FIRE WARDEN TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>11/05/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-033 IMV HYDRAULIC CRANE OPERATOR TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>10/07/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-031 SAFE SCISSOR LIFT MOUNTED PLATFORM ON IMV OPERATION TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>10/08/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Tunnel Cleaning Vehicle Operation (EV)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/08/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Rail Grinding Machine Operation (EV)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/08/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Road/Rail Vehicle Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/08/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Track Geometry &amp; Inspection Vehicle Operation (EV)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/08/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-029 HYDRAULIC CRANE ON RRV SAFETY OPERATION TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>10/09/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-007 CONFINED SPACE ENTRY TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/09/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>RKH-CT-003 ENGINEERING PERSON-IN-CHARGE</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>16/09/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-022 SAFE JIB CRANE OPERATION TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>13/10/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-032 SCISSOR LIFT MOUNTED PLATFORM ON TCV SAFETY OPERATION TRAINING &amp; ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-030 SAFE JIB CRANE MOUNTED PLATFORM OPERATION TRAINING AND ASSESSMENT (FLAT WAGON)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>15/10/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-024 SAFE OVERHEAD CRANE OPERATION TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>13/11/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-014 HAND &amp; POWER TOOLS SAFETY TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>19/11/2027</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-025 SCAFFOLDING ERECTION AND DISMANTLING TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>16/02/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-028 WORKING AT HEIGHTS TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>16/04/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-035 SAFE CHERRY PICKER OPERATION TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>18/05/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-023 SAFE MANLIFT OPERATION TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>05/06/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Ultrasonic Parts / Bearing Washing Machine Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>12/06/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Mobile Cleaning Equipment Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>12/06/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Parts Washing Machine Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>12/06/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Battery Powered Truck Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>12/07/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-026 SCAFFOLDING INSPECTOR TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>29/07/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Breakdown Recovery Wagon Operation (EV)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/08/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Diesel Locomotive Operation (EV)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/08/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Flat Wagon with Jib Crane, Flat Wagon without Jib Crane and Well Wagon Operation (EV)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/08/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Infrastructure Maintenance Vehicle Operation (EV)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/08/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>MF-002 MEDICAL FITNESS</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>17/08/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-005 BASIC RIGGING AND SLINGING TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>19/08/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-018 LIFTING SUPERVISOR SAFETY TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>25/08/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-027 SCAFFOLDING SUPERVISOR TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>07/09/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Track Welding Equipment - Weld Shear Maintenance/ W or B/M or 5 OH/6M or 30 OH/Y (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Trackwork Measuring Equipment Maintenance/ W or B/M or 5 OH/6M or 30 OH/Y (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Underframe Cleaning Maintenance/ W or B/6M  (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Various Trackwork Tools Maintenance/W or B/M or 5OH/M or 20OH/3M or 50OH/6M or 100OH/Y/2Y (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Washing Machine for Air Conditioner Filters Maintenance/ W or B/M/3M/6M (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Workshop Machinery Maintenance/ B/W or B/M/3M/6M/10 OH/300 OH/Y (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Battery Equipment Maintenance/ B/M/6M/Y  (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Bogie Powered Work Stand Maintenance/  W or B/M or 5 OH/6M or 30 OH/Y  (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Bogie Turntable Maintenance/ B/M/6M or 30 OH/Y  (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Engine Powered Trackwork Equipment Maintenance/ B/M or 5OH/Y/25OH/100OH/50OH/50OH/500 OH  (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Lifting Table Equipment Maintenance/ B/M or 5 OH/6M or 30 OH/Y  (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Paint Booth Maintenance/ B/M/6M/Y or 1000 OH/3300 OH/6600 OH/9900 OH/3Y (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Rail Tensor Maintenance/ W or B/M or 5 OH/6M or 30 OH/Y (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Stinger Shore Supply System Maintenance/ 6M/Y (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Track Slab Repair Tools Maintenance/ W or B/3M/6M (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-WBCD Maintenance/  M/3M/6M/12M  </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Welding Equipment Maintenance/ M/3M/6M/Y</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Wheel Boring Machine Maintenance/ W or B/M/6M or 400 OH/Y or 2000 OH </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Wheel Load Measuring System 4 Axle Maintenance/  B </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Automatic Train-set Wash Maintenance/ D/W/M/3M/6M/Y/2Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Axle Lathe Maintenance/ B/M/6M or 30 OH/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Bogie Frame Measurement System Maintenance/  W or B/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-BUEES Maintenance  B/M or 5 RH/6M of 30 RH/Y  </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Damper and Primary Spring Test Stand Maintenance/ B &amp; A/M/6M/Y/2Y/5Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Flash Butt Welder Maintenance/ B &amp; A/W/M </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Lathe Machine Maintenance/ D or B/W or B/3M/4M </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Magnetic Particle Inspection Maintenance/ M/4M/6M/12M </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-RST Operator Simulator Maintenance/ W/M/SA/A </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Scissor Lifting Platform Maintenance/ D or B/W or B/6M or after 150 RH </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/10/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Re-railing Equipment Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>24/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Wheel Reprofiling System - Underfloor Wheel Lathe Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>27/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Breakdown Recovery Wagon Maintenance/ W/M/6M/Y (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-DL Maint/100SH/250SH/500SH/1000SH/1500SH/2000SH/3000SH/4000,6000SH/DorB/W/M/6M/Y/2,3,4,5Y (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-IMV Maintenance/ B or 10 OH/50 OH/125 OH/250 OH/500 OH/1000 OH/2000OH/M (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Rail Grinding Machine Maintenance/ 50OH/10OH or B/20OH or B/100OH/200OH/500OH/1000OH/M (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Re-railing Equipment Maintenance/ E/M or 10 OH/12M/25 OH/50 OH/100 OH (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Road / Rail Vehicle Maintenance/ W or B/M or 250 OH/6M or 500 OH/Y (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-TCV Maint/ D or B/W/M/3M/1000H or 6M/100,250,400,500,2000H or Y/4000H or 2Y/6000H or 3Y (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Track Geometry Inspection Vehicle Maintenance/ W or B/M/Y/2Y/3Y/4Y (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-UWL Maint/ B/W or 40 OH/M or 250 OH/Bi-M or 500OH/4M or 1000OH/Y or 2000OH/2Y or 4000OH  (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Wagon w/wo Jib Crane Maint/ B/50OH/B/50OH/B/50OH/250OH/500OH/250OH/500OH/250OH/500OH (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Wheel Lathe Maintenance/ B/M/3M/6M/Y (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Wheel Press Maintenance/ 120OH/250OH/1000OH or 6M/2000OH or Y/3000OH or 3Y (Pkg1)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/11/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Air Shot Blast Booth Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>13/12/2028</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Painting Faciliies for Car Body in Case of Damage Maintenance/ B/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Parts Washing Machine Maintenance/ B/ W or B/3M/2Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Powered Low Lift Pallet Truck 2.5T Maintenance/ W or B/M or 5 OH/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Powered Stacker Truck 2.5T Maintenance/ D or B/W or Y or 1000 OH</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Road/Rail Mobile Access Platform (Cherry Picker) Maintenance/ B/M or 5 OH/6M or 30 OH/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Shunting Equipment Maintenance/ B/W or B/M/3M/3M or 500 OH/6M/6M or 1000 OH/Y/6M/Y/3Y</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Ultrasonic Parts / Bearing Washing Machine Maintenance/ D or B/M/6M </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Various Equipment Maintenance/ W or B/M/6M </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Air Shot Blast Booth Maintenance/ B/W/M/3M/6M </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Battery Powered Truck Maintenance/ W or B/M or 5 OH/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Bogie Washing Equipment Maintenance/ B/W/M/4M/6M/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Depot Protection System Maintenance/ M/3M/6M/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Forklift 2.5T Maintenance/ D or B/W or B/6M or 30 OH/Y/Y or 1000 OH </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Lifting Equipment Maintenance/ B/W/W or B/M/M or 5 OH//3M/6M/6M or 30 OH/Y (Pkg4)</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Lifting Jack Maintenance/  B/M or 5 OH/6M or 30 OH/Y  </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Lubrication Equipment Maintenance/ W or B </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Manual Lifting Equipment Maintenance/ B/M/3M/6M/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Mobile Access Platform for MEP Type 1  Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Mobile Access Platform for MEP Type 1 Maintenance/ W or B/M or 5 OH/6M/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Mobile Access Platform for MEP Type 2  Maintenance/ B/M/6M/Y </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Mobile Access Platform for MEP Type 2  Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Mobile Cleaning Equipment Maintenance/ W or B/M/Y or 500 OH </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Painting Facilities for Car body Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>18/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Road/Rail Mobile Access Platform (Cherry Picker) Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>30/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Lifting Equipment Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>31/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Manual Lifting Equipment Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>31/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Powered Low Lift Pallet Truck Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>31/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Powered Stacker Truck 2.5T Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>31/01/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Damper &amp; Primary Spring Test Stand Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>13/02/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Stinger Shore Supply System Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>13/02/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Bogie Washing Equipment Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>13/02/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Depot Protection System Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>14/02/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Lathe Machine Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>17/02/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Automatic Train-set Wash (ATW) Manual Mode Operation </div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>18/02/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Bogie Turntable Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>20/02/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-002 APPOINTED PERSON-LIFTING OPERATION TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>23/02/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Wheel Load Measuring System 4 Axle Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>17/03/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Workshop Machinery Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/04/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Shunting Equipment Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/04/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Bogie Powered Work stand Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>17/04/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Trackwork Equipment Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>21/04/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Bogie Frame Measurement System Squaring Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>22/04/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Magnetic Particle Inspection (axle and bogie frame) Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/05/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Paint Booth Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/06/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Underframe Cleaning System Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/06/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>TP-006 CONFINED SPACE ATTENDANT TRAINING AND ASSESSMENT</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>16/06/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-BUEES Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/07/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>RKH-CT-015 ENGINEERING VEHICLE SAFETY CRITICAL PROTOCOL AND NETWORK RULES TRAINING</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>09/07/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Platform Trolley (Powered Lift table) 2.5T / Lift Table (350 &amp; 500 Kgs) Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>01/08/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Battery Equipment Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/11/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Lifting Jack Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/12/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Scissor Lifting Platform Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/12/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>DMT-Washing Machine for Air Conditioner Unit Filter Operation</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Competence Assessments</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>02/12/2029</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>COMPETENT</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>MHI-ST-009 MHI-SM PTW PROCEDURE BRIEFING</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>In Perpetuity</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>RKH-CT-009 SAFETY CRITICAL COMMUNICATION</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>In Perpetuity</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+<article class='record-card'>
+<div class='field'>
+<div class='field-label'>COMPETENCY</div>
+<div class='field-value competency-value'>RKH-CT-011 TRACKS SAFETY AWARENESS</div>
+</div>
+<div class='field'>
+<div class='field-label'>COMPETENCY TYPE</div>
+<div class='field-value'>Licences</div>
+</div>
+<div class='field'>
+<div class='field-label'>DATE OF EXPIRY</div>
+<div class='field-value'>In Perpetuity</div>
+</div>
+<div class='field'>
+<div class='field-label'>DEPARTMENT</div>
+<div class='field-value'>DMT</div>
+</div>
+<div class='field'>
+<div class='field-label'>ROLE</div>
+<div class='field-value'>Senior Technician</div>
+</div>
+<div class='status-area'>
+<div class='field-label'>STATUS</div>
+<span class='status-badge status-green'>VALID</span>
+</div>
+</article>
+</section>
+</main>
+</div>
+</body>
+</html>
